@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Container from "react-bootstrap/Container";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
-import Home from "./components/home/Home";
+import HomePage from "./components/home/HomePage";
+import HotelsPage from "./components/hotels/HotelsPage";
+import ContactPage from "./components/contact/ContactPage";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Hotels from "./components/admin/Hotels";
@@ -13,6 +15,7 @@ import Dashboard from "./components/admin/Dashboard";
 import Nav from "./components/layout/Nav";
 import "./App.css";
 
+
 function App() {
     return (
         <AuthContextProvider>
@@ -21,8 +24,10 @@ function App() {
 
                 <Container>
                     <Switch>
-                        <Route path="/" exact component={Home} />
+                        <Route path="/" exact component={HomePage} />
                         <Route path="/login" component={Login} />
+                        <Route path="/hotels" component={HotelsPage} />
+                        <Route path="/contact" component={ContactPage} />
                         <Route path="/register" component={Register} />
                         <ProtectedRoute path="/admin" exact component={Dashboard} />
                         <ProtectedRoute path="/admin/hotels" exact component={Hotels} />

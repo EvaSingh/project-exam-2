@@ -3,12 +3,20 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import Logout from "../auth/Logout";
 
+
 function Nav() {
     const { user } = useContext(AuthContext);
     return (
+        
         <div className="menu">
             <NavLink to="/" exact>
                 Home
+            </NavLink>
+            <NavLink to="/hotels" exact>
+                Hotels
+            </NavLink>
+            <NavLink to="/contact" exact>
+                Contact
             </NavLink>
 
             {user ? (
@@ -20,6 +28,7 @@ function Nav() {
                 <NavLink to="/register">Login</NavLink>
             )}
         </div>
+        
     );
 }
 
