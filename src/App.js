@@ -5,6 +5,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import HomePage from "./components/home/HomePage";
 import HotelsPage from "./components/hotels/HotelsPage";
+import HotelDetail from "./components/hotels/HotelDetail";
 import ContactPage from "./components/contact/ContactPage";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
@@ -29,6 +30,7 @@ function App() {
                         <Route path="/hotels" component={HotelsPage} />
                         <Route path="/contact" component={ContactPage} />
                         <Route path="/register" component={Register} />
+                        <Route path="/hotel/:id" component={HotelDetail} />
                         <ProtectedRoute path="/admin" exact component={Dashboard} />
                         <ProtectedRoute path="/admin/hotels" exact component={Hotels} />
                         <ProtectedRoute path="/admin/hotels/add" exact component={AddHotel} />
