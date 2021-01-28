@@ -17,15 +17,15 @@ function HotelList() {
 		fetch(url, options)
 			.then((response) => response.json())
 			.then((json) => {
-					console.log(json);
-					// handle error
-					if (json.error) {
-						setHotels([]);
-						setError(json.message);
-					} else {
-							setHotels(json);
-							setFilteredHotels(json);
-					  }
+        console.log(json);
+        // handle error
+        if (json.error) {
+          setHotels([]);
+          setError(json.message);
+        } else {
+            setHotels(json);
+            setFilteredHotels(json);
+          }
 			})
 			.catch((error) => console.log(error));
 	}, []);
@@ -47,24 +47,23 @@ function HotelList() {
 
 	return (
     <>
-        {error && <div className="error">{error}</div>}
+    {error && <div className="error">{error}</div>}
 
-        <SearchHotel handleSEarch={filterHotels} />
-        
-        <Row>
-            {filteredHotels.map((hotel) => {
-                const {id, name, image, price } = hotel;
-                return (
-                    <>
-                    <Col xs={6} md={4} lg={3} key={id}>
-          <HotelItem id={id}  hotelName={name} image={image} price={price}/>
-        </Col>
-                    
-                    </>
-                );       
-            })}
-        </Row>
+    <SearchHotel handleSEarch={filterHotels} />
+    
+    <Row>
+      {filteredHotels.map((hotel) => {
+        const {id, name, image, price } = hotel;
 
+        return (
+          <>     
+          <Col xs={6} md={4} lg={3} key={id}>
+            <HotelItem id={id}  hotelName={name} image={image} price={price}/>
+          </Col>      
+          </>
+        );       
+      })}
+    </Row>
     </>
 	);
 }

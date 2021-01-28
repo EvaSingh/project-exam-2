@@ -15,5 +15,5 @@ export default function SearchHotel({handleSEarch}) {
 };
 
 SearchHotel.propTypes = {
-    handleSEarch: Proptypes.func.isRequired
+  handleSEarch: Proptypes.func.isRequired
 };

@@ -7,39 +7,33 @@ import Logout from "../auth/Logout";
 
 
 function Navigation() {
-    const { user } = useContext(AuthContext);
-    return (
-        
-        //<div className="menu">
-        <Navbar expand="lg">
-            <Navbar.Brand href="/">Holidaze</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-            <NavLink to="/hotels" exact>
-                Hotels
-            </NavLink>
-            <NavLink to="/contact" exact>
-                Contact
-            </NavLink>
+  const { user } = useContext(AuthContext);
 
-            {user ? (
-                <>
-                    <NavLink to="/admin">Admin</NavLink>
-                    <Logout />
-                </>
-            ) : (
-                <NavLink to="/register">Login</NavLink>
-            )}
-            </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-            
+  return (
+    <Navbar expand="lg">
+      <Navbar.Brand href="/">Holidaze</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+        <NavLink to="/hotels" exact>
+            Hotels
+        </NavLink>
+        <NavLink to="/contact" exact>
+            Contact
+        </NavLink>
 
-           
-        //</div>
-        
-    );
+        {user ? (
+            <>
+                <NavLink to="/admin">Admin</NavLink>
+                <Logout />
+            </>
+        ) : (
+            <NavLink to="/register">Login</NavLink>
+        )}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>   
+  );
 }
 
 export default Navigation;

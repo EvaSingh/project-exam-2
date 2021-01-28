@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-
 function HotelItem({ id, hotelName, image, price}) {
   return (
     <Card>
