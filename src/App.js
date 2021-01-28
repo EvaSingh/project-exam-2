@@ -13,7 +13,7 @@ import Hotels from "./components/admin/Hotels";
 import AddHotel from "./components/admin/AddHotel";
 import EditHotel from "./components/admin/EditHotel";
 import Dashboard from "./components/admin/Dashboard";
-import Nav from "./components/layout/Nav";
+import Navigation from "./components/layout/Navigation";
 import "./App.css";
 
 
@@ -21,7 +21,7 @@ function App() {
     return (
         <AuthContextProvider>
             <Router>
-                <Nav />
+                <Navigation />
 
                 <Container>
                     <Switch>

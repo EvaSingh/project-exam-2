@@ -1,17 +1,21 @@
 import React, { useContext } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import Logout from "../auth/Logout";
 
 
-function Nav() {
+function Navigation() {
     const { user } = useContext(AuthContext);
     return (
         
-        <div className="menu">
-            <NavLink to="/" exact>
-                Home
-            </NavLink>
+        //<div className="menu">
+        <Navbar expand="lg">
+            <Navbar.Brand href="/">Holidaze</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
             <NavLink to="/hotels" exact>
                 Hotels
             </NavLink>
@@ -27,9 +31,15 @@ function Nav() {
             ) : (
                 <NavLink to="/register">Login</NavLink>
             )}
-        </div>
+            </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+            
+
+           
+        //</div>
         
     );
 }
 
-export default Nav;
+export default Navigation;
