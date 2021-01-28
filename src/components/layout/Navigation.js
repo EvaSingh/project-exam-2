@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import Logout from "../auth/Logout";
 
-
 function Navigation() {
   const { user } = useContext(AuthContext);
 
