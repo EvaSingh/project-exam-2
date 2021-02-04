@@ -17,6 +17,7 @@ import Messages from "./components/admin/Messages.js";
 import EditHotel from "./components/admin/EditHotel";
 import Dashboard from "./components/admin/Dashboard";
 import Navigation from "./components/layout/Navigation";
+import Footer from "./components/layout/Footer";
 import "./App.css";
 
 
@@ -44,6 +45,7 @@ function App() {
                         <Redirect to="/" />
                     </Switch>
                 </Container>
+                <Footer></Footer>
             </Router>
         </AuthContextProvider>
     );
