@@ -1,0 +1,76 @@
+/*FONTS*/
+
+$font-heading: raleway, sans-serif;
+$font-copy: europa-light, sans-serif;
+
+/*COLORS*/
+
+$color-primary: #00B3A6;
+$color-secondary: #005457;
+
+html{
+  
+}
+
+body{
+  font-family: $font-copy; 
+}
+
+h1, h2, h3{
+  font-family: $font-heading;
+}
+
+a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+nav{
+
+  a {
+    color: black;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+a .navbar-brand{
+  font-weight: 400;
+  color: $color-secondary;
+}
+
+.form-group{
+  max-width: 500px;
+}
+
+.btn{
+  color: white;
+  background-color: $color-primary;
+  border-color: $color-primary; 
+
+  &:hover{
+    color: $color-primary;
+    background-color: white;
+    border-color: $color-primary; 
+    text-decoration: none;
+  }
+}
+
+.homepage-wrapper{
+  background-image: url("../../images/bergen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  padding-top: 100px;
+}

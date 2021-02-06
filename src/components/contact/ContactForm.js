@@ -5,7 +5,7 @@ import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-let contactSchema = yup.object().shape({
+let schema = yup.object().shape({
   firstName: yup
     .string()
     .required("First name is required")
@@ -26,7 +26,7 @@ let contactSchema = yup.object().shape({
 
 function ContactForm() {
   const { register, handleSubmit, errors } = useForm({
-    //resolver: yupResolver(contactSchema)
+    //resolver: yupResolver(schema)
   });
 
   function onSubmit(data) {

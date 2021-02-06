@@ -1,7 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Heading from "../layout/Heading";
 
 function Login() {
     const { register, handleSubmit } = useForm();
@@ -11,7 +13,7 @@ function Login() {
     }
 
     return (
-        <>
+        <Container>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <h1>Login</h1>
                 <Form.Group>
@@ -26,7 +28,7 @@ function Login() {
 
                 <Button type="submit">Submit</Button>
             </Form>
-        </>
+        </Container>
     );
 }
 

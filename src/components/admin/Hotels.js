@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
+import Container from "react-bootstrap/Container";
+import Heading from "../layout/Heading";
 
 function Hotels() {
     const [hotels, setHotels] = useState([]);
@@ -27,8 +29,9 @@ function Hotels() {
     }, []);
 
     return (
-        <>
-            <h1>Hotels</h1>
+    <>
+    <Heading title="Hotels" subtitle="Chose a hotel from the list to edit"/>
+    <Container>
             {error && <div className="error">{error}</div>}
             <ul>
                 {hotels.map((hotel) => {
@@ -39,7 +42,8 @@ function Hotels() {
                     );
                 })}
             </ul>
-        </>
+        </Container></>
+        
     );
 }
 

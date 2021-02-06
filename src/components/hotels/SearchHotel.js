@@ -5,8 +5,10 @@ import FormControl from "react-bootstrap/FormControl";
 
 export default function SearchHotel({handleSEarch}) {
   return (
-    <InputGroup>
+    <InputGroup className="search">
+                
       <FormControl 
+        className="round shadow-sm"
         placeholder="Search by hotel name.." 
         onChange={ event => handleSEarch(event) }
       />

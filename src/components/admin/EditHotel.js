@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { BASE_URL, headers, PATCH } from "../../constants/api";
 import DeleteHotel from "./DeleteHotel";
+import Heading from "../layout/Heading";
 
 function AddHotel() {
     const defaultState = {
@@ -39,8 +41,9 @@ function AddHotel() {
 
     return (
         <>
+        <Heading title="Edit hotel"/>
+        <Container>
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <h1>Edit Hotel</h1>
                 <Form.Group>
                     <Form.Label>Name</Form.Label>
                     <Form.Control name="name" defaultValue={hotel.name} placeholder="Enter a name for the hotel" ref={register} />
@@ -54,7 +57,8 @@ function AddHotel() {
                 <Button type="submit">Update</Button>
             </Form>
             <DeleteHotel id={id} />
-        </>
+        </Container></>
+        
     );
 }
 

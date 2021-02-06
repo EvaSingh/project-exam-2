@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
+import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+import { Link } from "react-router-dom";
 import Heading from "../layout/Heading";
 import { BASE_URL, headers } from "../../constants/api";
 
@@ -30,15 +32,11 @@ function HotelDetail() {
       return <Spinner animation="border" className="spinner" />;
     }
 
-return (
+  return (
+    
     <>
-      <Heading title={detail.name}></Heading>
-      
-      <Row>
-        <Col>
-        <p>{detail.description}</p>
-        </Col>
-      </Row>
+    <Heading title={detail.name} subtitle={detail.description}/>
+    <Container>
       <Row>
         <Col>
           <Image className="img-fluid" src={detail.image}/>  
@@ -47,11 +45,18 @@ return (
           <p>{detail.price}/night</p>
           <p>Max guests: {detail.maxGuests}</p>
           <p>Self catering: {detail.selfCatering}</p>
-          <Button>Book</Button>
+          <Link to="/enquire">
+            <Button>
+            Enquire
+          </Button>
+          </Link>
+          
+          
         </Col>
       </Row>
-    </>	
-	);
+      </Container></>
+      
+    );
 }
 
 export default HotelDetail;

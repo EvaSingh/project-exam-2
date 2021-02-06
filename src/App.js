@@ -18,7 +18,7 @@ import EditHotel from "./components/admin/EditHotel";
 import Dashboard from "./components/admin/Dashboard";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
-import "./App.css";
+import "./sass/styles.scss";
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <Router>
                 <Navigation />
 
-                <Container>
+                <Container fluid>
                     <Switch>
                         <Route path="/" exact component={HomePage} />
                         <Route path="/login" component={Login} />

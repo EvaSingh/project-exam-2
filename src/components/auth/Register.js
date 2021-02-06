@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { AuthContext } from "../../context/AuthContext";
+import Heading from "../layout/Heading";
 
 function Register() {
     const { register, handleSubmit } = useForm();
@@ -18,7 +20,8 @@ function Register() {
     }
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Container>
+          <Form onSubmit={handleSubmit(onSubmit)}>
             <h1>Login</h1>
             <Form.Group>
                 <Form.Label>Name</Form.Label>
@@ -27,6 +30,8 @@ function Register() {
 
             <Button type="submit">Submit</Button>
         </Form>
+        </Container>
+        
     );
 }
 

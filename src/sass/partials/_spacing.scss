@@ -1,0 +1,34 @@
+$margin-xs:5px;
+$margin-sm:10px;
+$margin-md:20px;
+$margin-lg:30px;
+$margin-xl:50px;
+
+.container{
+  margin-top: $margin-xl;
+}
+.container-fluid{
+  padding: 0;
+}
+
+.card{
+  margin-bottom: $margin-md;
+}
+
+.search{
+  margin:  $margin-xl auto $margin-xl auto;
+  max-width: 400px;
+}
+
+.round{
+  border-radius: 300px;
+  border: none;   
+}
+
+.heading{
+  margin-bottom: $margin-xl;
+}
+
+
+
+

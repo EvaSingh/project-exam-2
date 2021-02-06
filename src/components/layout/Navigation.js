@@ -9,22 +9,22 @@ function Navigation() {
   const { user } = useContext(AuthContext);
 
   return (
-    <Navbar expand="lg">
+    <Navbar className="shadow-sm" expand="lg">
       <Navbar.Brand href="/">Holidaze</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
         <NavLink to="/hotels" exact>
-            Hotels
+          Hotels
         </NavLink>
         <NavLink to="/contact" exact>
-            Contact
+          Contact
         </NavLink>
 
         {user ? (
             <>
-                <NavLink to="/admin">Admin</NavLink>
-                <Logout />
+            <NavLink to="/admin">Admin</NavLink>
+            <Logout />
             </>
         ) : (
             <NavLink to="/register">Login</NavLink>
