@@ -1,0 +1,78 @@
+@import "partials/variables";
+
+a{
+  color: black;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+    color: black;
+  }
+}
+  
+nav{
+
+  a {
+    color: black;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:hover{
+      color: black;
+      text-decoration: underline;
+    }
+  }  
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.footer{
+  @extend nav;
+  color: $color-neutral;
+  border-top: 1px solid $color-neutral;
+}
+
+.btn{
+  color: white;
+  background-color: $color-primary;
+  border-color: $color-primary; 
+
+  &:hover{
+    color: $color-primary;
+    background-color: white;
+    border-color: $color-primary; 
+    text-decoration: none;
+  }
+}
+
+.round{
+  border-radius: 300px !important;
+  border: none !important;
+}
+
+.form-group{
+  max-width: 500px;
+}
+
+.form-control{
+  border: none;
+  border-bottom: 1px solid $color-neutral;
+  border-radius: 0;
+}
+.card{
+  border: none;
+  background-color: $color-background;
+
+  a{
+    text-decoration: none;
+  }
+}

@@ -9,8 +9,10 @@ function Footer() {
   const { user } = useContext(AuthContext);
   
   return (
-    <Container>
-      <Nav className="mr-auto">
+    <Container className="footer">
+      <Nav className="footer__nav">
+        <strong className="footer__text">&copy;2021 Holidaze AS</strong>
+
         <NavLink to="/contact" exact>
           Contact
         </NavLink>
@@ -21,7 +23,7 @@ function Footer() {
           <Logout />
         </>
       ) : (
-          <NavLink to="/register">Login</NavLink>
+          <NavLink to="/register">Admin login</NavLink>
       )}
       </Nav>
     </Container>

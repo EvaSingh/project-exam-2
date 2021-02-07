@@ -10,25 +10,18 @@ function Navigation() {
 
   return (
     <Navbar className="shadow-sm" expand="lg">
-      <Navbar.Brand href="/">Holidaze</Navbar.Brand>
+      <Navbar.Brand className="logo" href="/">Holidaze</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="ml-auto">
         <NavLink to="/hotels" exact>
-          Hotels
+          All hotels
         </NavLink>
         <NavLink to="/contact" exact>
           Contact
         </NavLink>
 
-        {user ? (
-            <>
-            <NavLink to="/admin">Admin</NavLink>
-            <Logout />
-            </>
-        ) : (
-            <NavLink to="/register">Login</NavLink>
-        )}
+        
         </Nav>
       </Navbar.Collapse>
     </Navbar>   

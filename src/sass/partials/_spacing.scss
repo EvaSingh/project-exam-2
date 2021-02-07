@@ -1,34 +1,43 @@
-$margin-xs:5px;
-$margin-sm:10px;
-$margin-md:20px;
-$margin-lg:30px;
-$margin-xl:50px;
+@import "partials/variables";
 
 .container{
   margin-top: $margin-xl;
+  margin-bottom: $margin-lg;
 }
+
 .container-fluid{
   padding: 0;
 }
 
 .card{
   margin-bottom: $margin-md;
+  
+  &-body{
+    padding: 20px 0 20px 0;
+  }
+  
+  &-title{
+    margin-bottom: 0;
+  }  
 }
+
+
 
 .search{
   margin:  $margin-xl auto $margin-xl auto;
   max-width: 400px;
 }
 
-.round{
-  border-radius: 300px;
-  border: none;   
-}
-
 .heading{
   margin-bottom: $margin-xl;
 }
 
+.footer{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 25px 0;
 
-
-
+  &__text{
+    padding: 6px 12px;
+  }
+}
