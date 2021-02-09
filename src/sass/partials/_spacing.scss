@@ -13,12 +13,18 @@
   margin-bottom: $margin-md;
   
   &-body{
-    padding: 20px 0 20px 0;
+    padding: 5px 0 15px 0;
   }
   
   &-title{
     margin-bottom: 0;
-  }  
+  }
+  
+  &-img-top{
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+  }
 }
 
 
@@ -40,4 +46,14 @@
   &__text{
     padding: 6px 12px;
   }
+}
+
+.form{
+  margin-bottom: $margin-lg;
+}
+
+.object-fit{
+  object-fit: cover;
+  object-position: center;
+  max-height: 400px;
 }

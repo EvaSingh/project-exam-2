@@ -6,14 +6,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 let schema = yup.object().shape({
-  firstName: yup
+  name: yup
     .string()
-    .required("First name is required")
-    .min(2, "First name must be minimum 2 characters"),
-  lastName: yup
-    .string()
-    .required("Last name is required")
-    .min(2, "Last name must be minimum 2 characters"),
+    .required("Name is required")
+    .min(2, "Name must be minimum 2 characters"),
   email: yup
     .string()
     .email("Please enter a valid email")
@@ -36,15 +32,9 @@ function ContactForm() {
   return (
     <Form onSubmit={handleSubmit (onSubmit)}>
       <Form.Group>
-        <Form.Label>First name</Form.Label>
-        <Form.Control name="firstName" placeholder="Enter your first name" ref={register} />
-        {errors.firstName && <p>{errors.firstName.message}</p>}
-      </Form.Group>
-  
-      <Form.Group>
-        <Form.Label>Last name</Form.Label>
-        <Form.Control name="lastName" placeholder="Enter your last name" ref={register} />
-        {errors.lastName && <p>{errors.lastName.message}</p>}
+        <Form.Label>Name</Form.Label>
+        <Form.Control name="firstName" placeholder="Enter your name" ref={register} />
+        {errors.name && <p>{errors.name.message}</p>}
       </Form.Group>
   
       <Form.Group>
@@ -55,7 +45,7 @@ function ContactForm() {
   
       <Form.Group>
         <Form.Label>Message</Form.Label>
-        <Form.Control name="message" placeholder="Enter a message" ref={register} />
+        <Form.Control as="textarea" rows="12" name="message" placeholder="Enter a message" ref={register} />
         {errors.message && <p>{errors.message.message}</p>}
       </Form.Group>
   

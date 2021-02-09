@@ -57,7 +57,7 @@ function HotelList() {
 
         return (
           <>     
-          <Col xs={6} md={4} lg={3} key={id}>
+          <Col xs={12} sm={6 } lg={4}  key={id}>
             <HotelItem id={id}  hotelName={name} image={image} price={price}/>
           </Col>      
           </>

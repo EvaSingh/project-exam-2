@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import bergen from "../../images/bergen.jpg";
+import bergen from "../../images/bergen-building.jpg";
 import Heading from "../layout/Heading";
 import ContactForm from "./ContactForm";
 
@@ -18,11 +18,11 @@ export function ContactPage() {
     <Container>
       
       <Row>
-        <Col>
-          <ContactForm/>
+        <Col sm={12} md={7}>
+          <ContactForm classname="contact-form"/>
         </Col>
         <Col>
-          <Image src={bergen} fluid/>
+          <Image src={bergen} className="img-fluid"/>
         </Col>
       </Row>
     </Container>

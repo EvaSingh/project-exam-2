@@ -9,7 +9,7 @@ export default function SearchHotel({handleSEarch}) {
                 
       <FormControl 
         className="round shadow-sm"
-        placeholder="Search by hotel name.." 
+        placeholder="Find a hotel in Bergen..." 
         onChange={ event => handleSEarch(event) }
       />
     </InputGroup>

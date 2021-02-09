@@ -38,23 +38,24 @@ function HotelDetail() {
     <Heading title={detail.name} subtitle={detail.description}/>
     <Container>
       <Row>
-        <Col>
-          <Image className="img-fluid" src={detail.image}/>  
+        <Col sm={7}>
+          <Image className="img-fluid object-fit" src={detail.image}/> 
         </Col>
         <Col>
-          <p>{detail.price}/night</p>
+          <p>Price:{detail.price}/night</p>
           <p>Max guests: {detail.maxGuests}</p>
           <p>Self catering: {detail.selfCatering}</p>
           <Link to="/enquire">
             <Button>
-            Enquire
-          </Button>
-          </Link>
-          
-          
+              Enquire
+            </Button>
+          </Link> 
         </Col>
       </Row>
-      </Container></>
+        
+     
+      </Container>
+      </>
       
     );
 }
