@@ -1,9 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import { BASE_URL, headers } from "../../constants/api";
 //import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+
+
 
 let schema = yup.object().shape({
   name: yup
@@ -22,12 +26,26 @@ let schema = yup.object().shape({
 
 function ContactForm() {
   const { register, handleSubmit, errors } = useForm({
+
+    
     //resolver: yupResolver(schema)
   });
 
-  function onSubmit(data) {
-    console.log("data", data);
-  }
+  //const history = useHistory();
+
+    async function onSubmit(data) {
+      console.log("data", data);
+
+      const url = BASE_URL + "contacts";
+
+      const options = { headers, method: "POST", body: JSON.stringify(data) };
+
+      await fetch(url, options);
+
+      //history.push("/admin/messages");
+    }
+
+  
   
   return (
     <Form onSubmit={handleSubmit (onSubmit)}>
