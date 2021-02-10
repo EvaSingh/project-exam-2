@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { BASE_URL, headers } from "../../constants/api";
-import HotelItem from "../hotels/HotelItem";
-import SearchHotel from "../hotels/SearchHotel";
+import React from "react";
+import SearchBarTypeahead from "../layout/SearchBarTypeahead";
+
 
 function HomePage() {
   return (
     
     <div className="homepage-wrapper">
-      <SearchHotel/>
+      <SearchBarTypeahead/>
     </div>
          
 	);
