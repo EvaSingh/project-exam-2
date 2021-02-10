@@ -3,7 +3,7 @@ import Proptypes from "prop-types";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 
-export default function SearchHotel({handleSEarch}) {
+export default function SearchBar({handleSEarch}) {
   return (
     <InputGroup className="search">
                 
@@ -16,6 +16,6 @@ export default function SearchHotel({handleSEarch}) {
   );
 };
 
-SearchHotel.propTypes = {
+SearchBar.propTypes = {
   handleSEarch: Proptypes.func.isRequired
 };
