@@ -45,17 +45,15 @@ function HotelDetail() {
           <p>Price:{detail.price}/night</p>
           <p>Max guests: {detail.maxGuests}</p>
           <p>Self catering: {detail.selfCatering}</p>
-          <Link to="/enquire">
+          <Link to={`/enquire/${detail.id}`}>
             <Button>
               Enquire
             </Button>
           </Link> 
         </Col>
       </Row>
-        
-     
-      </Container>
-      </>
+    </Container>
+    </>
       
     );
 }
