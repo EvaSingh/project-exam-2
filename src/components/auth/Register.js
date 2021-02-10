@@ -20,9 +20,12 @@ function Register() {
     }
 
     return (
+        <>
+        <Heading 
+          title="Login"
+          subtitle="Log in to manage hotels, enquiries, messages and more."/>
         <Container>
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <h1>Login</h1>
             <Form.Group>
                 <Form.Label>Name</Form.Label>
                 <Form.Control name="username" placeholder="Enter your username" ref={register} />
@@ -31,7 +34,7 @@ function Register() {
             <Button type="submit">Submit</Button>
         </Form>
         </Container>
-        
+        </>
     );
 }
 
