@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BASE_URL, headers } from "../../constants/api";
 import HotelItem from "./HotelItem";
-import SearchHotel from "./SearchHotel";
+import SearchBar from "./SearchBar";
 
 function HotelList() {
 	const [hotels, setHotels] = useState([]);
@@ -49,7 +49,7 @@ function HotelList() {
     <>
     {error && <div className="error">{error}</div>}
 
-    <SearchHotel handleSEarch={filterHotels} />
+    <SearchBar handleSEarch={filterHotels} />
     
     <Row>
       {filteredHotels.map((hotel) => {
