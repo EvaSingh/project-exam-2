@@ -1,8 +1,8 @@
 @import "partials/variables";
 
 .container{
-  margin-top: $margin-xl;
-  margin-bottom: $margin-lg;
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-lg;
 }
 
 .container-fluid{
@@ -10,7 +10,7 @@
 }
 
 .card{
-  margin-bottom: $margin-md;
+  margin-bottom: $spacing-md;
   
   &-body{
     padding: 5px 0 15px 0;
@@ -27,29 +27,17 @@
   }
 }
 
-
-
 .search{
-  margin:  $margin-xl auto $margin-xl auto;
+  margin:  $spacing-xl auto $spacing-xl auto;
   max-width: 400px;
 }
 
 .heading{
-  margin-bottom: $margin-xl;
-}
-
-.footer{
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 25px 0;
-
-  &__text{
-    padding: 6px 12px;
-  }
+  margin-bottom: $spacing-xl;
 }
 
 .form{
-  margin-bottom: $margin-lg;
+  margin-bottom: $spacing-lg;
 }
 
 .object-fit{

@@ -13,19 +13,16 @@ a{
 nav{
 
   a {
-    color: black;
+    color: $color-secondary;
     padding: 6px 12px;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 
     &:hover{
-      color: $color-secondary;
-      text-decoration: none;
-      
-    }
-
-    
+      color: $color-primary;
+      text-decoration: none;  
+    }  
   } 
   
   .navbar-brand{
@@ -42,16 +39,26 @@ nav{
 .navbar-toggler,
 .navbar-toggler:focus,
 .navbar-toggler:active,
-.navbar-toggler-icon:focus {
+.navbar-toggler-icon:focus
+ {
     outline: none;
     border: none;
     box-shadow: none;
 }
 
-.footer{
+footer{
   @extend nav;
-  color: $color-neutral;
-  border-top: 1px solid $color-neutral;
+  background-color: $color-secondary;
+  color: white;
+
+  a{
+    color: white;
+  }
+
+  p{
+    font-size: 16px;
+  }
+  
 }
 
 .btn{
@@ -71,6 +78,18 @@ nav{
 .round{
   border-radius: 300px !important;
   border: none !important;
+  max-width: 400px;
+  margin:auto;
+}
+
+.rbt-input{
+  @extend .round;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.rbt-menu{
+  border: none;
+  border-radius: 0;  
 }
 
 .form-group{
