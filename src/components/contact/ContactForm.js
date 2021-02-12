@@ -2,12 +2,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { BASE_URL, headers } from "../../constants/api";
-//import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
-
 
 let schema = yup.object().shape({
   name: yup
@@ -24,34 +22,30 @@ let schema = yup.object().shape({
     .min(10, "Message must be minimum 10 characters")
 });
 
-function ContactForm() {
+export default function ContactForm() {
   const { register, handleSubmit, errors } = useForm({
-
-    
-    //resolver: yupResolver(schema)
+    resolver: yupResolver(schema)
   });
 
-  //const history = useHistory();
+  const history = useHistory();
 
-    async function onSubmit(data) {
-      console.log("data", data);
+  async function onSubmit(data) {
+    console.log("data", data);
 
-      const url = BASE_URL + "contacts";
+    const url = BASE_URL + "contacts";
 
-      const options = { headers, method: "POST", body: JSON.stringify(data) };
+    const options = { headers, method: "POST", body: JSON.stringify(data) };
 
-      await fetch(url, options);
+    await fetch(url, options);
 
-      //history.push("/admin/messages");
-    }
+    history.push("/admin/messages");
+  }
 
-  
-  
   return (
     <Form onSubmit={handleSubmit (onSubmit)}>
       <Form.Group>
         <Form.Label>Name</Form.Label>
-        <Form.Control name="firstName" placeholder="Enter your name" ref={register} />
+        <Form.Control name="name" placeholder="Enter your name" ref={register} />
         {errors.name && <p>{errors.name.message}</p>}
       </Form.Group>
   
@@ -71,5 +65,3 @@ function ContactForm() {
     </Form>
   );
 }
-
-export default ContactForm;
