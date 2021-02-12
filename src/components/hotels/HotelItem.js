@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function HotelItem({ id, hotelName, image, price}) {
+function HotelItem({ id, hotelName, image, price }) {
   return (
+
     <Card>
       <Card.Img variant="top" src={image} />
       <Card.Body>
@@ -20,6 +21,7 @@ function HotelItem({ id, hotelName, image, price}) {
         </Link>
       </Card.Body>
     </Card>
+    
   );
 }
 

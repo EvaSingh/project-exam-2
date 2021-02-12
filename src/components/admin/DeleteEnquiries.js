@@ -28,7 +28,7 @@ function DeleteEnquiries(props) {
     const url = BASE_URL + "enquiries/" + props.id;
     const options = { headers, method: DELETE };
     await fetch(url, options);
-    history.push("/admin/enquieries");
+    history.push("/admin/hotels/enquieries");
   }
 
   return (

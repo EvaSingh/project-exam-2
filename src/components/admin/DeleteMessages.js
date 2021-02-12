@@ -6,7 +6,7 @@ import { BASE_URL, headers, DELETE } from "../../constants/api";
 
 import "react-confirm-alert/src/react-confirm-alert.css";
 
-function DeleteMessage(props) {
+function DeleteMessages(props) {
   const history = useHistory();
 
   function checkDelete() {
@@ -38,4 +38,4 @@ function DeleteMessage(props) {
   );
 }
 
-export default DeleteMessage;
+export default DeleteMessages;

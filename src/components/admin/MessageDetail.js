@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Heading from "../layout/Heading";
-import DeleteMessage from "./DeleteMessage";
+import DeleteMessages from "./DeleteMessages";
 import { BASE_URL, headers } from "../../constants/api";
 
 
@@ -26,30 +26,30 @@ function MessageDetail() {
       .then(json => setDetail(json))
       .catch(error => console.log(error))
       .finally(() => setLoading(false));
-    }, []);
+  }, []);
 
-    if (loading) {
-      return <Spinner animation="border" className="spinner" />;
-    }
+  if (loading) {
+    return <Spinner animation="border" className="spinner" />;
+  }
 
   return (
     
     <>
-    <Heading title="Message" subtitle={detail.name}/>
+    <Heading 
+      title="Message"
+      subtitle={detail.name} />
     <Container>
       <Row>
         <Col>
           <p>{detail.message}</p> 
-        </Col>
-        
+        </Col> 
       </Row>
       <Button>Reply</Button>
-      <DeleteMessage id={id} />
-    
-      </Container>
-      </>
+      <DeleteMessages id={id} />
+    </Container>
+    </>
       
-    );
+  );
 }
 
 export default MessageDetail;

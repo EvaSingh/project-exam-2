@@ -7,10 +7,10 @@ function Login() {
 const { logout } = useContext(AuthContext);
 const history = useHistory();
 
-function doLogout() {
-  logout();
-  history.push("/");
-}
+  function doLogout() {
+    logout();
+    history.push("/");
+  }
 
   return <Button onClick={doLogout}>Log out</Button>;
 }

@@ -6,30 +6,30 @@ import Form from "react-bootstrap/Form";
 import Heading from "../layout/Heading";
 
 function Login() {
-    const { register, handleSubmit } = useForm();
+const { register, handleSubmit } = useForm();
 
-    function onSubmit(data) {
-        console.log("data", data);
-    }
+function onSubmit(data) {
+    console.log("data", data);
+}
 
-    return (
-        <Container>
-            <Form onSubmit={handleSubmit(onSubmit)}>
-                <h1>Login</h1>
-                <Form.Group>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control name="username" placeholder="Enter your username" ref={register} />
-                </Form.Group>
+  return (
+    <Container>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <h1>Login</h1>
+        <Form.Group>
+          <Form.Label>Name</Form.Label>
+          <Form.Control name="username" placeholder="Enter your username" ref={register} />
+        </Form.Group>
 
-                <Form.Group>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control name="password" placeholder="Enter your password" ref={register} />
-                </Form.Group>
+        <Form.Group>
+          <Form.Label>Password</Form.Label>
+          <Form.Control name="password" placeholder="Enter your password" ref={register} />
+        </Form.Group>
 
-                <Button type="submit">Submit</Button>
-            </Form>
-        </Container>
-    );
+        <Button type="submit">Submit</Button>
+      </Form>
+    </Container>
+  );
 }
 
 export default Login;

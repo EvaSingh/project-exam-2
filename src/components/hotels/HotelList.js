@@ -18,13 +18,12 @@ function HotelList() {
 			.then((response) => response.json())
 			.then((json) => {
         console.log(json);
-        // handle error
         if (json.error) {
           setHotels([]);
           setError(json.message);
         } else {
-            setHotels(json);
-            setFilteredHotels(json);
+          setHotels(json);
+          setFilteredHotels(json);
           }
 			})
 			.catch((error) => console.log(error));
@@ -46,25 +45,29 @@ function HotelList() {
 };
 
 	return (
+
     <>
     {error && <div className="error">{error}</div>}
 
-    <SearchBar handleSEarch={filterHotels} />
+    <SearchBar handleSearch={filterHotels} />
     
     <Row>
       {filteredHotels.map((hotel) => {
-        const {id, name, image, price } = hotel;
+        const { id, name, image, price } = hotel;
 
         return (
+
           <>     
           <Col xs={12} sm={6 } lg={4}  key={id}>
             <HotelItem id={id}  hotelName={name} image={image} price={price}/>
           </Col>      
           </>
+
         );       
       })}
     </Row>
     </>
+
 	);
 }
 

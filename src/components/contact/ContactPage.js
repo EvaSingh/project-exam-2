@@ -19,10 +19,10 @@ export function ContactPage() {
       
       <Row>
         <Col sm={12} md={7}>
-          <ContactForm classname="contact-form"/>
+          <ContactForm classname="contact-form" />
         </Col>
         <Col>
-          <Image src={bergen} className="img-fluid"/>
+          <Image src={bergen} className="img-fluid" />
         </Col>
       </Row>
     </Container>

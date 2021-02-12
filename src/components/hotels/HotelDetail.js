@@ -35,11 +35,13 @@ function HotelDetail() {
   return (
     
     <>
-    <Heading title={detail.name} subtitle={detail.description}/>
+    <Heading 
+      title={detail.name} 
+      subtitle={detail.description} />
     <Container>
       <Row>
         <Col sm={7}>
-          <Image className="img-fluid object-fit" src={detail.image}/> 
+          <Image className="img-fluid object-fit" src={detail.image} /> 
         </Col>
         <Col>
           <p>Price:{detail.price}/night</p>
@@ -55,7 +57,7 @@ function HotelDetail() {
     </Container>
     </>
       
-    );
+  );
 }
 
 export default HotelDetail;

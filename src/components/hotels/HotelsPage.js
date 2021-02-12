@@ -5,12 +5,13 @@ import HotelList from "./HotelList";
 
 export function HotelsPage() {
   return (
+
     <>
-    <Heading title="Hotels"/>
+    <Heading title="Hotels" />
     <Container>
-    
-    <HotelList></HotelList>
-    </Container></>
+    <HotelList />
+    </Container>
+    </>
     
   );
 }

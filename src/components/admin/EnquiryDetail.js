@@ -33,21 +33,20 @@ function EnquiryDetail() {
   return (
     
     <>
-    <Heading title="Enquiry" subtitle={detail.email}/>
+    <Heading 
+     title="Enquiry" 
+     subtitle={detail.name} />
     <Container>
       <Row>
         <Col>
-          <p>Message:{detail.message}</p>
-          
-          
+          <p>Email:{detail.email}</p> 
         </Col>
       </Row>
       <DeleteEnquiries id={id}/>
-     
-      </Container>
-      </>
+    </Container>
+    </>
       
-    );
+  );
 }
 
 export default EnquiryDetail;

@@ -25,11 +25,13 @@ import "./sass/styles.scss";
 
 function App() {
     return (
+    
         <AuthContextProvider>
             <Router>
+            <Container fluid className="wrapper">
                 <Navigation />
-
-                <Container fluid>
+                
+                
                     <Switch>
                         <Route path="/" exact component={HomePage} />
                         <Route path="/login" component={Login} />
@@ -43,16 +45,20 @@ function App() {
                         <ProtectedRoute path="/admin/hotels" exact component={Hotels} />
                         <ProtectedRoute path="/admin/hotels/add" exact component={AddHotel} />
                         <ProtectedRoute path="/admin/hotels/enquieries" exact component={Enquieries} />
-                        <ProtectedRoute path="/admin/hotels/enquiries/view/:id" exact component={EnquiryDetail} />
+                        <ProtectedRoute path="/admin/hotels/enquieries/view/:id" exact component={EnquiryDetail} />
                         <ProtectedRoute path="/admin/messages" exact component={Messages} />
                         <ProtectedRoute path="/admin/messages/view/:id" exact component={MessageDetail} />
                         <ProtectedRoute path="/admin/hotels/edit/:id" exact component={EditHotel} />
                         <Redirect to="/" />
                     </Switch>
                 </Container>
-                <Footer className="footer text-center bottom"></Footer>
+                <Footer className="footer"></Footer>
+                
             </Router>
         </AuthContextProvider>
+        
+      
+        
     );
 }
 

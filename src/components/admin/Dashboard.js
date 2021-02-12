@@ -6,23 +6,24 @@ import Heading from "../layout/Heading";
 
 function Dashboard() {
   return (
+
     <>
-    <Heading title="Dashboard"/>
+    <Heading title="Dashboard" />
     <Container>
-        <ul>
-            <li>
-                <NavLink to="/admin/hotels">List Hotels</NavLink>
-            </li>
-            <li>
-                <NavLink to="/admin/hotels/add">Add Hotel</NavLink>
-            </li>
-            <li>
-                <NavLink to="/admin/hotels/enquieries">Enquieries</NavLink>
-            </li>
-            <li>
-                <NavLink to="/admin/messages">Messages</NavLink>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <NavLink to="/admin/hotels">List Hotels</NavLink>
+        </li>
+        <li>
+          <NavLink to="/admin/hotels/add">Add Hotel</NavLink>
+        </li>
+        <li>
+          <NavLink to="/admin/hotels/enquieries">Enquieries</NavLink>
+        </li>
+        <li>
+          <NavLink to="/admin/messages">Messages</NavLink>
+        </li>
+      </ul>
     </Container>
     </>
       
