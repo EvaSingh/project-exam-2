@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Heading from "../layout/Heading";
 import DeleteEnquiries from "../admin/DeleteEnquiries";
 import { BASE_URL, headers } from "../../constants/api";
+import { Button } from "react-bootstrap";
 
 function EnquiryDetail() {
   const [detail, setDetail] = useState(null);
@@ -34,15 +35,22 @@ function EnquiryDetail() {
     
     <>
     <Heading 
-     title="Enquiry" 
-     subtitle={detail.name} />
+     title="Enquiry"  
+     subtitle={`From: ${detail.name}`} />
     <Container>
       <Row>
         <Col>
-          <p>Email:{detail.email}</p> 
+          <p>Email: {detail.email}</p> 
+          <p>Check in: {detail.checkIn}</p>
+          <p>Check out: {detail.checkOut}</p>
         </Col>
       </Row>
-      <DeleteEnquiries id={id}/>
+      <Row>
+        <Col>
+          <Button>Accept</Button>
+          <DeleteEnquiries id={id}/>
+        </Col>
+      </Row>
     </Container>
     </>
       
