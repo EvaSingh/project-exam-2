@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-//import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -9,9 +9,11 @@ import Heading from "../layout/Heading";
 
 function Login() {
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
 
   function onSubmit(data) {
       console.log("data", data);
+      history.push("/dashboard");
   }
 
   return (
@@ -22,7 +24,6 @@ function Login() {
     subtitle="Log in to manage hotels, enquiries, messages and more."
     />
     <Container>
-      <Link>Register new user</Link>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group>
           <Form.Label>Name</Form.Label>
@@ -37,6 +38,7 @@ function Login() {
        
       </Form>
     </Container>
+    <Link to="/register">Register new user</Link>
     </>
     
   );

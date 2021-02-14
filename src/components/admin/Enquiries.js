@@ -38,7 +38,7 @@ function Enquiries() {
       {enquiries.map((message) => {
         return (
           <li key={message.id}>
-            <NavLink to={`/admin/hotels/enquieries/view/${message.id}`}>{message.name}</NavLink>
+            <NavLink to={`/admin/hotels/enquiries/view/${message.id}`}>{message.name}</NavLink>
           </li>
         );
       })}

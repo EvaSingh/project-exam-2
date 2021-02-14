@@ -14,21 +14,27 @@ function Register() {
 
 	function onSubmit(data) {
 		console.log("data", data);
-		registerUser(data.username);
-		history.push("/admin");
+		registerUser(data.username, data.password);
+		history.push("/login");
 	}
 
 	return (
 
 		<>
 		<Heading 
-			title="Login"
-			subtitle="Log in to manage hotels, enquiries, messages and more." />
+		  title="Register user"
+		  subtitle="Create a user name and password."
+	    />
 		<Container>
 			<Form onSubmit={handleSubmit(onSubmit)}>
 				<Form.Group>
 					<Form.Label>Name</Form.Label>
-					<Form.Control name="username" placeholder="Enter your username" ref={register} />
+					<Form.Control name="username" placeholder="Enter a username" ref={register} />
+				</Form.Group>
+
+				<Form.Group>
+					<Form.Label>Password</Form.Label>
+					<Form.Control name="password" placeholder="Enter a pasword" ref={register} />
 				</Form.Group>
 
 				<Button type="submit">Submit</Button>

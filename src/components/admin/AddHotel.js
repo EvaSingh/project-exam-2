@@ -26,6 +26,7 @@ function AddHotel() {
     }
 
     return (
+      
       <>
       <Heading title="Add Hotel"/>
       <Container>
@@ -43,9 +44,8 @@ function AddHotel() {
           <Button type="submit">Submit</Button>
         </Form>
       </Container>
-        </>
-        
-        
+      </>
+           
     );
 }
 

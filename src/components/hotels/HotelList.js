@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
+import Spinner from "react-bootstrap/Spinner";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BASE_URL, headers } from "../../constants/api";
 import HotelItem from "./HotelItem";
-import SearchBar from "./SearchBar";
+import SearchBar from "../layout/SearchBar";
 
 function HotelList() {
 	const [hotels, setHotels] = useState([]);
 	const [error, setError] = useState(null);
 	const [filteredHotels, setFilteredHotels] = useState([]);
+  const [loading, setLoading] = useState(true);
 	const url = BASE_URL + "establishments";
 
 	const options = { headers };
@@ -26,9 +28,13 @@ function HotelList() {
           setFilteredHotels(json);
           }
 			})
-			.catch((error) => console.log(error));
+			.catch((error) => console.log(error))
+      .finally(() => setLoading(false));
 	}, []);
 
+  if (loading) {
+		return <Spinner animation="border" className="spinner" />;
+  }
 	const filterHotels = function(e) {
 		const searchValue = e.target.value.toLowerCase();
 		const filteredArray = hotels.filter(function(g) {

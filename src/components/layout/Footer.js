@@ -25,7 +25,7 @@ function Footer() {
           <Logout />
         </>
       ) : (
-          <NavLink to="/register">Admin login</NavLink>
+          <NavLink to="/login">Admin login</NavLink>
       )}
       </Nav>
       </Row>

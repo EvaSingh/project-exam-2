@@ -18,7 +18,7 @@ function Dashboard() {
           <NavLink to="/admin/hotels/add">Add Hotel</NavLink>
         </li>
         <li>
-          <NavLink to="/admin/hotels/enquieries">Enquieries</NavLink>
+          <NavLink to="/admin/hotels/enquiries">Enquiries</NavLink>
         </li>
         <li>
           <NavLink to="/admin/messages">Messages</NavLink>
