@@ -58,7 +58,10 @@ function Login() {
         {errors.creds && <p>{errors.creds.message}</p>}
       </Form>
     </Container>
-    <Link to="/register">Register new user</Link>
+    <Container>
+    <Link to="/register" className="link--underlined">Register new user</Link>
+    </Container>
+    
     </> 
   );
 }

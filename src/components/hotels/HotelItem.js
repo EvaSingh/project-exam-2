@@ -11,7 +11,7 @@ function HotelItem({ id, hotelName, image, price }) {
       <Card.Body>
         <Card.Title>{hotelName}</Card.Title>
         <Card.Text>
-          <p>NOK {price}/night </p>  
+          <p>EUR {price}/night </p>  
         </Card.Text>
         <Link to={"hotel/" + id}>
           <Button variant="primary" block>

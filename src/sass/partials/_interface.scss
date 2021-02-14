@@ -9,6 +9,15 @@ a{
     text-decoration: underline;
   }
 }
+
+.link--underlined{
+  color: $color-secondary;
+  text-decoration: underline;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
   
 nav{
 
@@ -73,9 +82,20 @@ footer{
     border-color: $color-primary; 
     text-decoration: none;
   }
+
+  &-danger{
+    background-color: $color-warning;
+    border: 1px solid $color-warning;
+
+    &:hover{
+      color: $color-warning;
+      background-color: white;
+      border-color: $color-warning;
+    }
+  }
 }
 
-.input-rounded{
+.search-bar--rounded{
   border-radius: 300px !important;
   border: none !important;
   max-width: 400px;
@@ -83,7 +103,7 @@ footer{
 }
 
 .rbt-input{
-  @extend .input-rounded;
+  @extend .search-bar--rounded;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
@@ -94,6 +114,11 @@ footer{
 
 .form-group{
   max-width: 500px;
+
+  p{
+    color: $color-warning;
+    font-size: 14px;
+  }
 }
 
 .form-control{
@@ -102,6 +127,7 @@ footer{
   border-radius: 0;
   font-weight: 300;
 }
+
 .card{
   border: none;
   background-color: $color-background;

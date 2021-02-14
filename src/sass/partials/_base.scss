@@ -12,21 +12,12 @@ body{
   padding-bottom: 150px;
 }
 
-footer{
+.footer{
   width: 100%;
   align-items: center;
   position: absolute;
   height: 150px;
   bottom: 0;
-  text-align: center;
-  
-  .container{
-    align-self: center center;
-    
-    .row{
-    align-self: center center;  
-    } 
-  }
 }
 
 .logo{
@@ -42,13 +33,4 @@ footer{
   height: 100vh;
   width: auto;
   padding-top: 100px;
-}
-
-.container--small{
-  max-width: 960px;
-  margin: auto;
-}
-
-.img-fluid{
-  width: 100%;
 }

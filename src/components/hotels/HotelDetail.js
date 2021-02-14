@@ -33,17 +33,17 @@ function HotelDetail() {
     }
 
   return (
-    <Container>
+    <Container className="hotel-detail">
       <Heading 
         title={detail.name} 
         subtitle={detail.description} 
       />
       <Row>
         <Col sm={7}>
-          <Image className="img-fluid object-fit" src={detail.image} /> 
+          <Image className="img-fluid img--controlled" src={detail.image} /> 
         </Col>
         <Col>
-          <p>Price: {detail.price}/night</p>
+          <p>Price: EUR {detail.price}/night</p>
           <p>Max guests: {detail.maxGuests}</p>
           <p>Contact the hotel: {detail.email}</p>
           <Link to={`/enquire/${detail.id}`}>

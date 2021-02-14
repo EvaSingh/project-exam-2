@@ -39,6 +39,7 @@ function EnquiryDetail() {
       <Row>
         <Col>
           <p>Email: {detail.email}</p> 
+          <p>Hotel: { id }</p>
           <p>Check in: {detail.checkIn}</p>
           <p>Check out: {detail.checkOut}</p>
         </Col>

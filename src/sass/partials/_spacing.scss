@@ -3,16 +3,18 @@
 .container{
   margin-top: $spacing-xl;
   margin-bottom: $spacing-lg;
-
-  &-narrow{
-    max-width: 800px;
-    margin-left: 0;
-    padding-left: 0;
-  }
 }
 
 .container-fluid{
   padding: 0;
+}
+
+.heading--controlled{
+  @extend .container;
+ 
+  max-width: 700px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .card{
@@ -33,21 +35,31 @@
   }
 }
 
-.search{
+.search-bar{
   margin:  $spacing-xl auto $spacing-xl auto;
   max-width: 400px;
-}
-
-.heading{
-  margin-bottom: $spacing-xl;
 }
 
 .form{
   margin-bottom: $spacing-lg;
 }
 
-.object-fit{
+.img--controlled{
   object-fit: cover;
   object-position: center;
   max-height: 400px;
+  margin-bottom: $spacing-lg;
+}
+
+.img-fluid{
+  width: 100%;
+}
+
+.btn{
+  margin-bottom: $spacing-md;
+  margin-right: $spacing-md;
+}
+
+p{
+  margin-bottom: $spacing-md;
 }
