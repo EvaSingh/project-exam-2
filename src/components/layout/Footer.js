@@ -10,34 +10,30 @@ function Footer() {
   const { user } = useContext(AuthContext);
   
   return (
-
     <footer>
       <Container>
-      <Row>
-      <Nav>
-        <NavLink to="/contact" exact>
-          Contact
-        </NavLink>
+        <Row>
+        <Nav>
+          <NavLink to="/contact" exact>
+            Contact
+          </NavLink>
 
-      {user ? (
-        <>
-          <NavLink to="/admin">Admin</NavLink>
-          <Logout />
-        </>
-      ) : (
-          <NavLink to="/login">Admin login</NavLink>
-      )}
-      </Nav>
-      </Row>
-      <Row>
-        <p>holidaze</p>
-      </Row>
-      
-      
+        {user ? (
+          <>
+            <NavLink to="/admin">Admin</NavLink>
+            <Logout />
+          </>
+        ) : (
+            <NavLink to="/login">Admin login</NavLink>
+        )}
+        </Nav>
+        </Row>
+        <Row>
+          <p>holidaze</p>
+        </Row>
       </Container>
       
-    </footer>
-   
+    </footer> 
   );
 }
 

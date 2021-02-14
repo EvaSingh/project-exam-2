@@ -35,13 +35,12 @@ function Login() {
   }
 
   return (
-
     <>
-    <Heading 
-    title="Login"
-    subtitle="Log in to manage hotels, enquiries, messages and more."
-    />
     <Container>
+      <Heading 
+        title="Login"
+        subtitle="Log in to manage hotels, enquiries, messages and more." 
+      />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group>
           <Form.Label>Name</Form.Label>
@@ -54,13 +53,13 @@ function Login() {
           <Form.Control name="password" placeholder="Enter your password" ref={register} />
           {errors.password && <p>{errors.password.message}</p>}
         </Form.Group>
+
         <Button type="submit">Submit</Button>
         {errors.creds && <p>{errors.creds.message}</p>}
       </Form>
     </Container>
     <Link to="/register">Register new user</Link>
-    </>
-    
+    </> 
   );
 }
 

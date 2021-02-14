@@ -22,6 +22,7 @@ function Register() {
 	const { register, handleSubmit, errors } = useForm({
 		resolver: yupResolver(schema)
 	});
+
 	const { registerUser } = useContext(AuthContext);
 	const history = useHistory();
 
@@ -32,13 +33,11 @@ function Register() {
 	}
 
 	return (
-
-		<>
-		<Heading 
-		  title="Register user"
-		  subtitle="Create a user name and password."
-	    />
-		<Container>
+    <Container>
+      <Heading 
+        title="Register user"
+        subtitle="Create a user name and password." 
+      />
 			<Form onSubmit={handleSubmit(onSubmit)}>
 				<Form.Group>
 					<Form.Label>Name</Form.Label>
@@ -55,8 +54,6 @@ function Register() {
 				<Button type="submit">Submit</Button>
 		  </Form>
 		</Container>
-		</>
-
 	);
 }
 

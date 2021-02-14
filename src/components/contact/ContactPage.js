@@ -9,14 +9,11 @@ import ContactForm from "./ContactForm";
 
 export function ContactPage() {
   return (
-    
-    <>
-    <Heading 
-      title="Contact us"
-      subtitle="Drop us a message and we will get back to you"
-    />
     <Container>
-      
+      <Heading 
+        title="Contact us"
+        subtitle="Drop us a message and we will get back to you" 
+      />
       <Row>
         <Col sm={12} md={7}>
           <ContactForm classname="contact-form" />
@@ -25,9 +22,7 @@ export function ContactPage() {
           <Image src={bergen} className="img-fluid" />
         </Col>
       </Row>
-    </Container>
-    </>  
-    
+    </Container>  
   );
 }
 

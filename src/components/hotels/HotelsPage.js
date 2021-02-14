@@ -5,14 +5,10 @@ import HotelList from "./HotelList";
 
 export function HotelsPage() {
   return (
-
-    <>
-    <Heading title="Hotels" />
     <Container>
+    <Heading title="Hotels" />
     <HotelList />
     </Container>
-    </>
-    
   );
 }
 

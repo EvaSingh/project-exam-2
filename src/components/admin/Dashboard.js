@@ -6,10 +6,8 @@ import Heading from "../layout/Heading";
 
 function Dashboard() {
   return (
-
-    <>
-    <Heading title="Dashboard" />
     <Container>
+      <Heading title="Dashboard" />
       <ul>
         <li>
           <NavLink to="/admin/hotels">List Hotels</NavLink>
@@ -24,9 +22,7 @@ function Dashboard() {
           <NavLink to="/admin/messages">Messages</NavLink>
         </li>
       </ul>
-    </Container>
-    </>
-      
+    </Container>   
   );
 }
 

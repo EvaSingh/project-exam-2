@@ -49,10 +49,8 @@ function MakeEnquiry() {
   }
     
   return (
-
-    <>
-    <Heading title="Make an enquiry" />
     <Container>
+      <Heading title="Send an enquiry" />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group>
           <Form.Label>Name</Form.Label>
@@ -86,9 +84,7 @@ function MakeEnquiry() {
 
         <Button type="submit">Submit</Button>
       </Form>
-    </Container>
-    </>
-        
+    </Container>    
   );
 }
 

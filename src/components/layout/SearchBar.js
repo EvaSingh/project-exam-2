@@ -5,11 +5,9 @@ import FormControl from "react-bootstrap/FormControl";
 
 export default function SearchBar({handleSearch}) {
   return (
-
-    <InputGroup className="search">
-                
+    <InputGroup className="search">        
       <FormControl 
-        className="round shadow-sm"
+        className="input-rounded shadow-sm"
         placeholder="Find a hotel in Bergen..." 
         onChange={ event => handleSearch(event) }
       />

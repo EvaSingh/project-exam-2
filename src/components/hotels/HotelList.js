@@ -38,7 +38,6 @@ function HotelList() {
 	const filterHotels = function(e) {
 		const searchValue = e.target.value.toLowerCase();
 		const filteredArray = hotels.filter(function(g) {
-
 			const lowerCaseName = g.name.toLowerCase();
 
 			if (lowerCaseName.includes(searchValue)) {
@@ -51,29 +50,23 @@ function HotelList() {
 };
 
 	return (
-
     <>
     {error && <div className="error">{error}</div>}
-
     <SearchBar handleSearch={filterHotels} />
-    
     <Row>
       {filteredHotels.map((hotel) => {
         const { id, name, image, price } = hotel;
 
         return (
-
           <>     
           <Col xs={12} sm={6 } lg={4}  key={id}>
             <HotelItem id={id}  hotelName={name} image={image} price={price}/>
           </Col>      
           </>
-
         );       
       })}
     </Row>
     </>
-
 	);
 }
 

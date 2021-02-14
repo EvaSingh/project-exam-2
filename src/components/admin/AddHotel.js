@@ -52,7 +52,7 @@ function AddHotel() {
     return (
       
       <>
-      <Heading title="Add Hotel"/>
+      <Heading title="Add Hotel" />
       <Container>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group>

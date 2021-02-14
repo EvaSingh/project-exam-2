@@ -27,25 +27,21 @@ function Enquiries() {
   }, []);
 
   return (
-
-  <>
-  <Heading 
-    title="Enquiries" 
-    subtitle="Your enquiries are listed here" />
-  <Container>
-    {error && <div className="error">{error}</div>}
-    <ul>
-      {enquiries.map((message) => {
-        return (
-          <li key={message.id}>
-            <NavLink to={`/admin/hotels/enquiries/view/${message.id}`}>{message.name}</NavLink>
-          </li>
-        );
-      })}
-    </ul>
-  </Container>
-  </>
-      
+    <Container>
+      <Heading 
+      title="Enquiries" 
+      subtitle="Your enquiries are listed here" />
+      {error && <div className="error">{error}</div>}
+      <ul>
+        {enquiries.map((message) => {
+          return (
+            <li key={message.id}>
+              <NavLink to={`/admin/hotels/enquiries/view/${message.id}`}>{message.name}</NavLink>
+            </li>
+          );
+        })}
+      </ul>
+    </Container>   
   );
 }
 

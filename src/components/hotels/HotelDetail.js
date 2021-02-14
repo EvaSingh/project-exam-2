@@ -33,12 +33,11 @@ function HotelDetail() {
     }
 
   return (
-    
-    <>
-    <Heading 
-      title={detail.name} 
-      subtitle={detail.description} />
     <Container>
+      <Heading 
+        title={detail.name} 
+        subtitle={detail.description} 
+      />
       <Row>
         <Col sm={7}>
           <Image className="img-fluid object-fit" src={detail.image} /> 
@@ -54,9 +53,7 @@ function HotelDetail() {
           </Link> 
         </Col>
       </Row>
-    </Container>
-    </>
-      
+    </Container>   
   );
 }
 

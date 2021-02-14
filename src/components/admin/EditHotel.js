@@ -61,19 +61,15 @@ function AddHotel() {
       .catch((error) => console.log(error));
   }, []);
 
-  async function onSubmit(data) {
-    console.log("data", data);
-
+  async function onSubmit(data){
     const updateOptions = { headers, method: PATCH, body: JSON.stringify(data) };
     await fetch(fetchUrl, updateOptions);
     history.push("/admin/hotels");
   }
 
   return (
-
-    <>
-    <Heading title="Edit hotel"/>
     <Container>
+      <Heading title="Edit hotel"/>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group>
           <Form.Label>Name</Form.Label>
@@ -114,9 +110,7 @@ function AddHotel() {
         <Button type="submit">Update</Button>
       </Form>
       <DeleteHotel id={id} />
-    </Container>
-    </>
-      
+    </Container>  
   );
 }
 

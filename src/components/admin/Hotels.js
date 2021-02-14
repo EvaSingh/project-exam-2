@@ -28,12 +28,11 @@ function Hotels() {
   }, []);
 
   return (
-
-    <>
-    <Heading 
-     title="Hotels" 
-     subtitle="Chose a hotel from the list to edit" />
     <Container>
+      <Heading 
+        title="Hotels" 
+        subtitle="Chose a hotel from the list to edit"
+      />
       {error && <div className="error">{error}</div>}
       <ul>
         {hotels.map((hotel) => {
@@ -45,8 +44,6 @@ function Hotels() {
         })}
       </ul>
     </Container>
-    </>
-      
   );
 }
 

@@ -7,9 +7,6 @@ html{
 
 body{
   min-height: 100%;
-  font-family: $font-paragraph; 
-  font-size: 21px;
-  font-weight: 300;
   background-color: $color-background;
   position: relative;
   padding-bottom: 150px;
@@ -23,41 +20,13 @@ footer{
   bottom: 0;
   text-align: center;
   
-  
-  
   .container{
     align-self: center center;
     
-     .row{
-      align-self: center center;
-       
-     } 
+    .row{
+    align-self: center center;  
+    } 
   }
-}
-
-h1, h2, h3{
-  font-family: $font-heading;
-}
-
-h1{
-  font-size: 72px;
-}
-
-h2{
-  font-size: 61px;
-}
-
-h3{
-  font-size: 49px;
-}
-
-h4{
-  font-size: 35px;
-}
-
-h5{
-  font-size: 28px;
-  font-weight: 300;
 }
 
 .logo{

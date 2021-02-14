@@ -31,13 +31,11 @@ function EnquiryDetail() {
       return <Spinner animation="border" className="spinner" />;
     }
 
-  return (
-    
-    <>
-    <Heading 
-     title="Enquiry"  
-     subtitle={`From: ${detail.name}`} />
+  return (  
     <Container>
+      <Heading 
+        title="Enquiry"  
+        subtitle={`From: ${detail.name}`} /> 
       <Row>
         <Col>
           <p>Email: {detail.email}</p> 
@@ -51,9 +49,7 @@ function EnquiryDetail() {
           <DeleteEnquiries id={id}/>
         </Col>
       </Row>
-    </Container>
-    </>
-      
+    </Container>   
   );
 }
 

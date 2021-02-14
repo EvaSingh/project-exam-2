@@ -26,7 +26,6 @@ import Footer from "./Footer";
 
 function Layout() {
   return (
-  
     <AuthContextProvider>
       <Router>
       <Container fluid>
@@ -54,8 +53,7 @@ function Layout() {
       </Container>
       <Footer className="footer"></Footer>  
       </Router>
-    </AuthContextProvider>
-          
+    </AuthContextProvider>       
   );
 }
 

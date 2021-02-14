@@ -33,29 +33,23 @@ function MessageDetail() {
   }
 
   return (
-    
-    <>
-    <Heading 
-      title="Message"
-      subtitle={`From: ${detail.name} (${detail.email})`} />
     <Container>
+      <Heading 
+        title="Message"
+        subtitle={`From: ${detail.name} (${detail.email})`}
+      />
       <Row>
         <Col>
           <p>{detail.message}</p> 
         </Col> 
-      </Row>
-        
+      </Row> 
       <Row>
         <Col>
           <Button>Reply</Button>
           <DeleteMessages id={id} />
         </Col>
       </Row>
-      
-      
     </Container>
-    </>
-      
   );
 }
 

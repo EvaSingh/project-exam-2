@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-//import Proptypes from "prop-types";
 import { BASE_URL, headers } from "../../constants/api";
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 
@@ -27,7 +26,6 @@ export default function SearchBarTypeahead(){
   };
   
 	return (
-    
     <AsyncTypeahead
       isLoading={isLoading}
       labelKey="name"
@@ -39,6 +37,5 @@ export default function SearchBarTypeahead(){
         <Link to={"hotel/" + hotel.id}>{hotel.name}</Link>
       )}
     /> 
-
 	);
 };

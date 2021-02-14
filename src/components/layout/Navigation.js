@@ -5,9 +5,7 @@ import { NavLink } from "react-router-dom";
 //import { AuthContext } from "../../context/AuthContext";
 
 function Navigation() {
-
   return (
-
     <Navbar className="shadow-sm" expand="lg">
       <Navbar.Brand className="logo" href="/">Holidaze</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -21,8 +19,7 @@ function Navigation() {
           </NavLink>
         </Nav>
       </Navbar.Collapse>
-    </Navbar>  
-     
+    </Navbar>    
   );
 }
 

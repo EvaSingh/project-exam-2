@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Heading from "../layout/Heading";
 
-
 function Messages() {
   const [messages, setMessages] = useState([]);
   const [error, setError] = useState(null);
@@ -28,25 +27,22 @@ function Messages() {
   }, []);
 
   return (
-
-  <>
-  <Heading 
-    title="Messages" 
-    subtitle="Your messages are listed here" />
-  <Container>
-    {error && <div className="error">{error}</div>}
-    <ul>
-      {messages.map((message) => {
-        return (
-          <li key={message.id}>
-            <NavLink to={`/admin/messages/view/${message.id}`}>{message.name}</NavLink>
-          </li>
-        );
-      })}
-    </ul>
-  </Container>
-  </>
-      
+    <Container>
+      <Heading 
+        title="Messages" 
+        subtitle="Your messages are listed here" 
+      />
+      {error && <div className="error">{error}</div>}
+      <ul>
+        {messages.map((message) => {
+          return (
+            <li key={message.id}>
+              <NavLink to={`/admin/messages/view/${message.id}`}>{message.name}</NavLink>
+            </li>
+          );
+        })}
+      </ul>
+    </Container>
   );
 }
 

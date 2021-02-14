@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 function Heading({title, subtitle}) {
   return (
-    <Container>
+    <Container className="container-narrow">
       <h1>{title}</h1>
       <h5>{subtitle}</h5>
     </Container>
