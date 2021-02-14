@@ -1,14 +1,27 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import * as yup from "yup";
+import {yupResolver} from "@hookform/resolvers/yup";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { AuthContext } from "../../context/AuthContext";
 import Heading from "../layout/Heading";
 
+let schema = yup.object().shape({
+	username: yup
+		.string()
+		.required("Username is required"),
+	password: yup
+		.string()
+		.required("Password is required")
+});
+
 function Register() {
-	const { register, handleSubmit } = useForm();
+	const { register, handleSubmit, errors } = useForm({
+		resolver: yupResolver(schema)
+	});
 	const { registerUser } = useContext(AuthContext);
 	const history = useHistory();
 
@@ -30,11 +43,13 @@ function Register() {
 				<Form.Group>
 					<Form.Label>Name</Form.Label>
 					<Form.Control name="username" placeholder="Enter a username" ref={register} />
+					{errors.username && <p>{errors.username.message}</p>}
 				</Form.Group>
 
 				<Form.Group>
 					<Form.Label>Password</Form.Label>
-					<Form.Control name="password" placeholder="Enter a pasword" ref={register} />
+					<Form.Control type="password" name="password" placeholder="Enter a pasword" ref={register} />
+					{errors.password && <p>{errors.password.message}</p>}
 				</Form.Group>
 
 				<Button type="submit">Submit</Button>
