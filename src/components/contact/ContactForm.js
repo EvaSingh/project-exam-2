@@ -37,8 +37,8 @@ export default function ContactForm() {
     const options = { headers, method: "POST", body: JSON.stringify(data) };
 
     await fetch(url, options);
-
-    history.push("/admin/messages");
+     
+    history.push("/confirmed");
   }
 
   return (

@@ -45,7 +45,7 @@ function MakeEnquiry() {
 
     await fetch(url, options);
 
-    history.push("/admin/hotels/enquieries");
+    history.push("/confirmed");
   }
     
   return (
@@ -63,7 +63,7 @@ function MakeEnquiry() {
         <Form.Group>
           <Form.Label>Email</Form.Label>
           <Form.Control name="email" placeholder="Enter your email" ref={register} />
-          {errors.name && <p>{errors.email.message}</p>}
+          {errors.email && <p>{errors.email.message}</p>}
         </Form.Group>
 
         <Form.Group>
@@ -75,13 +75,13 @@ function MakeEnquiry() {
         <Form.Group>
           <Form.Label>Check in</Form.Label>
           <Form.Control type="date" name="checkIn"  ref={register} />
-          {errors.name && <p>{errors.checkIn.message}</p>}
+          {errors.checkIn && <p>{errors.checkIn.message}</p>}
         </Form.Group>
 
         <Form.Group>
           <Form.Label>Check out</Form.Label>
           <Form.Control type="date" name="checkOut" ref={register} />
-          {errors.name && <p>{errors.checkOut.message}</p>}
+          {errors.checkOut && <p>{errors.checkOut.message}</p>}
         </Form.Group>
 
         <Button type="submit">Submit</Button>
