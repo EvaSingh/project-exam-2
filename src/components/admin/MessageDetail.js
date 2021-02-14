@@ -37,7 +37,7 @@ function MessageDetail() {
     <>
     <Heading 
       title="Message"
-      subtitle={`From: ${detail.name} ( ${detail.email} )`} />
+      subtitle={`From: ${detail.name} (${detail.email})`} />
     <Container>
       <Row>
         <Col>

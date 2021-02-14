@@ -44,12 +44,12 @@ function HotelDetail() {
           <Image className="img-fluid object-fit" src={detail.image} /> 
         </Col>
         <Col>
-          <p>Price:{detail.price}/night</p>
+          <p>Price: {detail.price}/night</p>
           <p>Max guests: {detail.maxGuests}</p>
-          <p>Self catering: {detail.selfCatering}</p>
+          <p>Contact the hotel: {detail.email}</p>
           <Link to={`/enquire/${detail.id}`}>
             <Button>
-              Enquire
+              Send enquiry
             </Button>
           </Link> 
         </Col>
