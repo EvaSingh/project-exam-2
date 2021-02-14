@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+//import { useHistory } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Heading from "../layout/Heading";
 
 function Login() {
-const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm();
 
-function onSubmit(data) {
-    console.log("data", data);
-}
+  function onSubmit(data) {
+      console.log("data", data);
+  }
 
   return (
+
+    <>
+    <Heading 
+    title="Login"
+    subtitle="Log in to manage hotels, enquiries, messages and more."
+    />
     <Container>
+      <Link>Register new user</Link>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <h1>Login</h1>
         <Form.Group>
           <Form.Label>Name</Form.Label>
           <Form.Control name="username" placeholder="Enter your username" ref={register} />
@@ -25,10 +33,12 @@ function onSubmit(data) {
           <Form.Label>Password</Form.Label>
           <Form.Control name="password" placeholder="Enter your password" ref={register} />
         </Form.Group>
-
         <Button type="submit">Submit</Button>
+       
       </Form>
     </Container>
+    </>
+    
   );
 }
 
