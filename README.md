@@ -1,4 +1,4 @@
-# Hotel API example
+# Project Exam 2
 
 ```
 npm install
